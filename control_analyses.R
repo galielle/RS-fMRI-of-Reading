@@ -1,7 +1,3 @@
-## Analyses for controls paper
-
-setwd("C:/Users/Gali/Dropbox/My Documents/JHU/Lab - Brenda's/1 Project/ROI analysis/RdN vs All");
-
 require(utils);
 require(plyr);
 library(lmerTest);
@@ -9,8 +5,6 @@ library(car);
 
 ## All data: These data contain all the ROIs from the 7 networks (RdN, SpN, LCN, CCN, DMN, DAN, SMN) ##
 ind_all <- read.table("cont_combo_151110.txt", header = TRUE);
-#ind_all <-  read.table("jittered_151129.txt", header = TRUE);
-#ind_all <- read.table("jittered_large_151208.txt", header = TRUE);
 ind_all <- subset(ind_all, WAS != 0); # remove same pairs
 ind_all_no_shared <- subset(ind_all, dist > 0); # subset without autocorrelations
 included_nets <- c(0:9,12,13,17, 19, 21)
@@ -20,7 +14,6 @@ ind_inc <- subset(ind_all, nets %in% included_nets)
 coh <- subset(ind_inc, WAS == 1);
 
 net <- subset(ind_inc, SMN != 0); ## Change network here 
-
 
 ## OPN data: These data contain OPN ROIs; shared ROIs between the SpN and RdN only appear once. ##
 opn_ind_all <- read.table("snl_ind.txt", header = TRUE);
