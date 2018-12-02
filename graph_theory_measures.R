@@ -1,5 +1,3 @@
-setwd("C:/Users/Gali/Dropbox/My Documents/JHU/Lab - Brenda's/1 Project/ROI analysis/RdN vs All/Dendrograms");
-
 library(ape);
 library(FactoMineR);
 library(cba);
@@ -18,7 +16,6 @@ unique_rois <- c('14',	'15',	'16',	'17',	'18',	'19',	'20',	'21',	'22',	'39',	'40
 
 
 read_mat_all <- function(uniq_rois = 1) {
-  setwd("C:/Users/Gali/Dropbox/My Documents/JHU/Lab - Brenda's/1 Project/ROI analysis/RdN vs All/Dendrograms/individual");
   participants <- c(2,3,4,6,8,9,10,11);
   net_name <- "all";
   all_ps <- c();
