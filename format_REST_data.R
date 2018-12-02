@@ -1,5 +1,3 @@
-setwd("C:/Users/Gali/Dropbox/My Documents/JHU/Lab - Brenda's/1 Project/ROI analysis/RdN vs All/5nets_18ps_180113");
-
 require(utils);
 require(plyr);
 library(lmerTest);
@@ -67,6 +65,6 @@ add_cols_all_ind <- function(ind_data, area_data) {
 
 ### Create one data file - *RUN THIS*
 ind_all <- add_cols_all_ind(create_all_ind(area_id_list), area_data);
-write.table(ind_all, file = 'C:/Users/Gali/Dropbox/My Documents/JHU/Lab - Brenda\'s/1 Project/ROI analysis/RdN vs All/all_data_18p_opn.txt', sep = ",", quote = FALSE, col.names = TRUE);
+write.table(ind_all, file = 'all_data_18p_opn.txt', sep = ",", quote = FALSE, col.names = TRUE);
 
 
