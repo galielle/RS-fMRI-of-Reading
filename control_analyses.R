@@ -4,7 +4,7 @@ library(lmerTest);
 library(car);
 
 ## All data: These data contain all the ROIs from the 7 networks (RdN, SpN, LCN, CCN, DMN, DAN, SMN) ##
-ind_all <- read.table("cont_combo_151110.txt", header = TRUE);
+ind_all <- read.table("cont_combo.txt", header = TRUE);
 ind_all <- subset(ind_all, WAS != 0); # remove same pairs
 ind_all_no_shared <- subset(ind_all, dist > 0); # subset without autocorrelations
 included_nets <- c(0:9,12,13,17, 19, 21)
